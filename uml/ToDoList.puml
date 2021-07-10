@@ -1,0 +1,46 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ToDoList {
+    + main()
+    + start()
+}
+
+class MainMenuController {
+    - Show all user created lists
+    - Create new lists
+    - Delete lists
+    - Save lists
+    - Load lists
+
+    + createList()
+    + deleteList()
+    + editName()
+    + saveOneList()
+    + saveAllList()
+    + loadOneList()
+    + loadAllList()
+}
+
+class ListItemsController {
+    - Show all user created items
+    - Add new items to list
+    - Remove items from list
+    - Edit items from list
+    - Sort items
+
+    + addItem()
+    + removeItem()
+    + editItem()
+    + markComplete()
+    + sortAll()
+    + sortIncomplete()
+    + sortComplete()
+}
+
+
+javafx.Application  <|-- ToDoList
+ToDoList - MainMenuController
+MainMenuController -- ListItemsController
+
+@enduml
