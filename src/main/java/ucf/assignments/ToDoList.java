@@ -23,26 +23,14 @@ public class ToDoList extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("ToDoList.fxml"));
 
             Scene scene = new Scene(root);
 
             primaryStage.setScene(scene);
-            primaryStage.setTitle("ToDoList");
-            primaryStage.setResizable(false);
-            primaryStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("ListItems.fxml"));
-
-            Scene scene = new Scene(root);
-
-            primaryStage.setScene(scene);
-            primaryStage.setTitle("ToDoList");
+            primaryStage.setTitle("To Do List");
             primaryStage.setResizable(false);
             primaryStage.show();
         } catch (IOException e) {

@@ -6,41 +6,28 @@ class ToDoList {
     + start()
 }
 
-class MainMenuController {
-    - Show all user created lists
-    - Create new lists
-    - Delete lists
-    - Save lists
-    - Load lists
-
-    + createList()
-    + deleteList()
-    + editName()
-    + saveOneList()
-    + saveAllList()
-    + loadOneList()
-    + loadAllList()
-}
-
-class ListItemsController {
-    - Show all user created items
+class ToDoListController {
     - Add new items to list
     - Remove items from list
     - Edit items from list
     - Sort items
+    - Save/Load Files
 
+    + initialize()
     + addItem()
     + removeItem()
+    + clearList()
     + editItem()
     + markComplete()
     + sortAll()
     + sortIncomplete()
     + sortComplete()
+    + saveList()
+    + loadList()
 }
 
 
 javafx.Application  <|-- ToDoList
-ToDoList - MainMenuController
-MainMenuController -- ListItemsController
+ToDoList - ListItemsController
 
 @enduml

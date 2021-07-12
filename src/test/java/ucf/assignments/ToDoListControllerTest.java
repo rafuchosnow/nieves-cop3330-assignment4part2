@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ListItemsControllerTest {
+class ToDoListControllerTest {
 
     @Test
     void addItem() {
@@ -30,6 +30,11 @@ class ListItemsControllerTest {
     }
 
     @Test
+    void clearList() {
+
+    }
+
+    @Test
     void editItem() {
         //Provide item description
         //Call addItem function
@@ -44,7 +49,16 @@ class ListItemsControllerTest {
         //Call addItem function
         //Select item
         //Call markComplete function
-        //Assert item .matches with "completed" sign
+        //Assert item .matches with "complete" sign
+    }
+
+    @Test
+    void markIncomplete() {
+        //Provide item description
+        //Call addItem function
+        //Select item
+        //Call markComplete function
+        //Assert item .matches with "incomplete" sign
     }
 
     @Test
@@ -73,5 +87,20 @@ class ListItemsControllerTest {
         //Call sortComplete
         //Assert all items consist of only complete items
     }
+
+    @Test
+    void saveList() {
+        //Call saveList function
+        //Read file as a string
+        //Assert with originally provided list
+    }
+
+    @Test
+    void loadList() {
+        //Read file as a string
+        //Call loadList function
+        //Assert string from file with the now added list
+    }
+
 
 }
