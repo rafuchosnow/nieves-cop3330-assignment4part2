@@ -28,6 +28,6 @@ class ToDoListController {
 
 
 javafx.Application  <|-- ToDoList
-ToDoList - ListItemsController
+ToDoList - ToDoListController
 
 @enduml
